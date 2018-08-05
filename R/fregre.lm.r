@@ -291,7 +291,7 @@ if (!is.data.frame(XX)) XX=data.frame(XX)
 }       
 #    z$call<-z$call[1:2]
 for (i in 1:length(vfunc)) {
- if (bsp1) beta.l[[vfunc[i]]]=fd(z[[1]][name.coef[[vfunc[i]]]],basis.b[[vfunc[i]]])
+ if (bsp1) beta.l[[vfunc[i]]]=fd(z$coefficients[name.coef[[vfunc[i]]]],basis.b[[vfunc[i]]])
  else{
 	if(class(data[[vfunc[i]]])[1]=="fdata"){
 #     beta.est<-z$coefficients[name.coef[[vfunc[i]]]]*vs.list[[vfunc[i]]]
